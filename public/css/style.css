@@ -1,0 +1,114 @@
+body {
+	font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+#header {	
+	overflow: hidden;
+}
+
+#textHeader {
+	font-family: Verdana, sans-serif;
+	font-size: 300%;
+	color: #000000;
+
+	position: absolute;
+	height: 12px;
+	width: auto;
+	padding: 2px 50px 10px;
+	margin-top: -320px;
+	margin-left: 80px;
+}
+
+#imgHeader {
+	opacity: 0.8;
+	width: 100%;
+	height: auto;
+	max-height: 30em;
+	margin-right: 10em;
+}
+
+#selectionHeader {
+	padding-left: 5px;
+	color: #ffffff;
+}
+
+.burgers {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 19% 19% 19% 19%;
+
+	background-color: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	margin-bottom: 30px;
+
+	border-style: dashed;
+	border-color: #FF8C00;
+	border-width: 5px;
+}
+
+ .american {
+     grid-column: 1;
+ }
+ .classic {
+     grid-column: 2;
+ }
+ .halloumi {
+     grid-column: 3;
+ }
+ .chicken {
+     grid-column: 4;
+ }
+
+.special {
+	grid-column: 5;
+}
+
+.allergies {
+	color: #ffffff;
+}
+
+#gluten {
+	font-weight: bold;
+}
+
+#lactose {
+	font-weight: bold;
+}
+
+#vegetarian {
+	font-weight: bold;
+}
+
+#order {
+	padding-left: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+
+	border-style: solid;
+	border-color: #000000;
+	border-width: 3px;
+}
+
+button {
+	padding: 7px 20px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+button:hover {
+	background-color: #FF8C00;
+	padding: 9px 19px;
+}
+/*
+table {
+	width: 98%;
+	table-layout: center;
+	padding: 1px 10px 7px;
+}*/
