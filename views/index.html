@@ -2,7 +2,12 @@
 <html lang="en">
 
  	<head>
- 		<link rel="stylesheet" type="text/css" href="css/style.css">		
+ 		<link rel="stylesheet" type="text/css" href="css/style.css">
+ 		 <script type="text/javascript" src="js/menu.js"></script>
+ 		 <script src="js/js_script.js" defer></script>
+ 		 <script src="js/menu.js" defer></script>
+ 		 <script src="https://vuejs.org/js/vue.js"></script>
+ 		 <script src="js/vue_script.js" defer></script>		
     	<title>BurgerHeaven</title>    		   	
     	<meta charset="utf-8"/>
 	</head>
@@ -15,7 +20,10 @@
 		</header>
 
 		<section>
-		<div class="burgers">	
+			<h1>Select burger</h1>
+			<div id="burgers" class="burgers"></div>
+		
+		<!--	
 			<div class="select">		   	
 				<h2>Select burger</h2>
 			</div>
@@ -24,6 +32,7 @@
 		        <img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/All-American-Hamburgers_EXPS_THJJ17_29321_D02_03_5b-1-696x696.jpg" width="200" height="200" title="american" alt="burger">
 				<ul>
 					<li>Cheese and bacon</li>
+					<li>700 kCal</li>
 					<section class="allergies">
 					<li>Contains <span id="gluten">gluten</span></li>
 					<li>Contains <span id="lactose">lactose</span></li>
@@ -36,6 +45,7 @@
 				<img src="http://images.media-allrecipes.com/userphotos/960x960/3757723.jpg" width="200" height="200" title="classic" alt="burger">
 				<ul>
 					<li>Classic dressing</li>
+					<li>623 kCal</li>
 					<section class="allergies">
 					<li>Contains <span id="gluten">gluten</span></li>
 					<li>Contains <span id="lactose">lactose</span></li>
@@ -49,6 +59,7 @@
 	            <ul>
 					<section class="allergies">
 				  	<li><span id="vegetarian">Vegetarian</span> burger</li>
+				  	<li>591 kCal</li>
 				  	<li>Contains <span id="gluten">gluten</span></li>
 				  	<li>Contains <span id="lactose">lactose</span></li>
 				  	</section>
@@ -60,6 +71,7 @@
 		    	<img src="https://www.chicken.ca/assets/RecipePhotos/_resampled/FillWyI3MjAiLCI2MDAiXQ/Moist-Chicken-Burgers.jpg" width="200" height="200" title="Chicken" alt="burger">
 		    	<ul>
 			  		<li>Chicken and leek</li>
+			  		<li>600 kCal</li>
 			  		<section class="allergies">
 			 		<li>Contains <span id="gluten">gluten</span></li>
 			  		<li><span id="lactose">Lactose free</span></li>
@@ -72,13 +84,14 @@
 		      	<img src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps28800_UG143377D12_18_1b_RMS-696x696.jpg" height="200" title="Special" alt="burger">
 		      	<ul>
 			  		<li>Cheese and bacon</li>
+			  		<li>675 kCal</li>
 			  		<section class="allergies">
 			  		<li><span id="gluten">Gluten free</span> bread</li>
 			  		<li>Contains <span id="lactose">lactose</span></li>
 			  		</section>
 				</ul>
-			</div>
-		</div>
+			</div>	
+		</div>-->
 	</section>
 
 		<section id="order">
@@ -118,11 +131,11 @@
 				<input type="radio" name="gender" value="male">Male<br>
 				<input type="radio" name="gender" value="female">Female<br>
 				<input type="radio" name="gender" value="nonbinary">Non-binary<br>
-				<input type="radio" name="gender" value="nothing" checked="checked">Undisclosed<br>
+				<input type="radio" name="gender" value="undisclosed" checked="checked">Undisclosed<br>
 			</form>
       	</section>
-      	<br><button type="submit">Place my order! <img src="https://www.freeiconspng.com/uploads/click-icon-cursors-png-22.png" width="15" height="15">
-      	</button>
+      	<br><button id="submitButton" type="submit">Place my order! <img src="https://www.freeiconspng.com/uploads/click-icon-cursors-png-22.png" width="15" height="15"></button>
+      	<br><br><div id="orderConfirmation"></div>
     </main>
     <hr>    
     <footer>
